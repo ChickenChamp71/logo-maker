@@ -1,20 +1,43 @@
-# logo-maker
+# Logo Maker GA
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-AS a freelance web developer
-I WANT to generate a simple logo for my projects
-SO THAT I don't have to pay a graphic designer
+  ## Description
 
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for text
-THEN I can enter up to three characters
-WHEN I am prompted for the text color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I am prompted for a shape
-THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-WHEN I am prompted for the shape's color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I have entered input for all the prompts
-THEN an SVG file is created named `logo.svg`
-AND the output text "Generated logo.svg" is printed in the command line
-WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+  A simple three-letter logo maker to put as a place-holder for whatever you need it. It can do multiple colors and shapes. 
+
+  ## Table of Contents
+
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Installation
+
+  Simply run index.js using node after downloading the code.
+
+  ## Usage
+
+  To create basic logos in svg format for whatever the purpose you need.
+
+  ## License
+
+  MIT
+
+  ## Contributing
+
+  Fork it if you desire, but this is completed.
+
+  ## Tests
+
+  There is a section on shape tests to confirm that they all function when adding various colors to the main three shape types.
+
+  ## Questions
+
+  ChickenChamp71
+
+  https://github.com/ChickenChamp71
+
+  Email: chickensandsharks@gmail.com
