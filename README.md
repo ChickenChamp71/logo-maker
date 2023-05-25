@@ -22,6 +22,8 @@
 
   To create basic logos in svg format for whatever the purpose you need.
 
+  https://drive.google.com/file/d/1dvF9qv3EM8ceOugqBgLbcnMIgFvkJW5E/view?usp=sharing
+
   ## License
 
   MIT
