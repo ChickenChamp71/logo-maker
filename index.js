@@ -11,12 +11,12 @@ function writeToFile(data) {
         if (err) {
             console.log(err);
         } else {
-            console.log('Logo file successfully created! :D');
+            console.log('Generated logo.svg :D');
         }
     });
 }
 
-function test() {
+function init() {
     inquirer
         .prompt([
             {
@@ -28,7 +28,7 @@ function test() {
             {
                 type: 'input',
                 name: 'textColor',
-                message: 'Select a color for the text. Can be a hex code or a simple color name.',
+                message: 'Select a color for the text. Can be a hex code with a "#", or a simple color name.',
             },
             {
                 type: 'list',
@@ -51,4 +51,4 @@ function test() {
         })
 }
 
-test();
+init();
