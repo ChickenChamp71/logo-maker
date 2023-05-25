@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const maxLengthInquirer = require('inquirer-maxlength-input-prompt');
 const fs = require('fs');
-const Shape = require('./lib/shapes');
 const Circle = require('./lib/circle');
 const Triangle = require('./lib/triangle');
 const Square = require('./lib/square');
@@ -20,20 +19,16 @@ function writeToFile(data) {
 }
 
 function logoGen(data) {
-
-    if (data.shape !== undefined) {
         
-        if (data.shape == 'Circle') {
-            data = new Circle(data.color, data.text, data.textColor);
-        } else if (data.shape == 'Triangle') {
-            data = new Triangle(data.color, data.text, data.textColor);
-        } else {
-            data = new Square(data.color, data.text, data.textColor);
-        }
+    if (data.shape == 'Circle') {
+        data = new Circle(data.color, data.text, data.textColor);
+    } else if (data.shape == 'Triangle') {
+        data = new Triangle(data.color, data.text, data.textColor);
     } else {
-
-        return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"><${data.dimension} style="fill:${data.color}"/><${data.specialText}${data.textColor}">${data.text}</text></svg>`
+        data = new Square(data.color, data.text, data.textColor);
     }
+
+    return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"><${data.dimension} style="fill:${data.color}"/><${data.specialText}${data.textColor}">${data.text}</text></svg>`
 };
 
 function init() {
@@ -65,8 +60,9 @@ function init() {
         .then((answers) => {
 
             const data = answers;
-
+            console.log(data);
             writeToFile(data);
+            
     
         })
 }
