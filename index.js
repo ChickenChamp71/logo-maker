@@ -21,18 +21,19 @@ function writeToFile(data) {
 
 function logoGen(data) {
 
-    if (data.shape == 'Circle') {
-        data = new Circle(data.color, data.text, data.textColor);
-    } else if (data.shape == 'Triangle') {
-        data = new Triangle(data.color, data.text, data.textColor);
+    if (data.shape !== undefined) {
+        
+        if (data.shape == 'Circle') {
+            data = new Circle(data.color, data.text, data.textColor);
+        } else if (data.shape == 'Triangle') {
+            data = new Triangle(data.color, data.text, data.textColor);
+        } else {
+            data = new Square(data.color, data.text, data.textColor);
+        }
     } else {
-        data = new Square(data.color, data.text, data.textColor);
-    }
 
-    return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
-<${data.dimension} style="fill:${data.color}"/>
-<${data.specialText}${data.textColor}">${data.text}</text>
-</svg>`
+        return `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"><${data.dimension} style="fill:${data.color}"/><${data.specialText}${data.textColor}">${data.text}</text></svg>`
+    }
 };
 
 function init() {
@@ -71,3 +72,5 @@ function init() {
 }
 
 init();
+
+module.exports = logoGen;
