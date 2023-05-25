@@ -1,7 +1,10 @@
 const inquirer = require('inquirer');
 const maxLengthInquirer = require('inquirer-maxlength-input-prompt');
 const fs = require('fs');
-const shapes = require('./lib/shapes');
+const Shape = require('./lib/shapes');
+const Circle = require('./lib/circle');
+const Triangle = require('./lib/triangle');
+const Square = require('./lib/square');
 
 inquirer.registerPrompt('maxlength-input', maxLengthInquirer);
 
@@ -45,6 +48,8 @@ function init() {
         .then((answers) => {
 
             const data = answers;
+
+
             console.log(data);
             writeToFile(data);
     
